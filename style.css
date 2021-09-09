@@ -39,8 +39,7 @@ body {
 
 #container .block {
   padding: 2rem;
-  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem black;
-          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem black;
+  border: 1px solid green;
   border-radius: 1rem;
   margin: 0.5rem;
 }
