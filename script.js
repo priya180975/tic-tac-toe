@@ -26,7 +26,8 @@ function random()
     emptyArr();
 }
 
-function win(){
+function win()
+{
 
     if(arr[0]==arr[1] && arr[1]===arr[2] && arr[1]!==' ')
     {
@@ -73,12 +74,21 @@ function winner(letter)
 {
     $(".block").css("pointer-events","none");
     $("#heading").text("Winner "+letter);
+    if(letter=='x')
+    {
+        $("body").css("background","#bcff6f81");
+    }
+    else
+    {
+        $("body").css("background","#ff161681");
+    }
 }
 
 function tie()
 {
     $(".block").css("pointer-events","none");
     $("#heading").text("Tie");
+    $("body").css("background","#ffa754d0");
 }
 
 $(document).ready(
@@ -90,9 +100,6 @@ $(document).ready(
                 select();
 
                 $.when(select()).done(function(){
-                    // $.when(setTimeout(random,1000)).done(
-                    //     setTimeout(win,1200)
-                    // )
                     $.when(random()).done(
                         win()
                     );
@@ -104,11 +111,12 @@ $(document).ready(
             function(){
                 arr=[];
                 arrEmpty=[];
-                $("#heading").text("x and o");
+                $("#heading").text("tic-tac-toe");
                 $(".block").each(function(){
                     $(this).text(' ')
                 });
                 $(".block").css("pointer-events","all");
+                $("body").css("background","#f6b4ff86");
             }
         )
         
