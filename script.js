@@ -90,13 +90,27 @@ $(document).ready(
                 select();
 
                 $.when(select()).done(function(){
-                    $.when(setTimeout(random,1000)).done(
-                        setTimeout(win,1200)
-                    )
+                    // $.when(setTimeout(random,1000)).done(
+                    //     setTimeout(win,1200)
+                    // )
+                    $.when(random()).done(
+                        win()
+                    );
                 });
-
             }
         );
+
+        $("#reset").click(
+            function(){
+                arr=[];
+                arrEmpty=[];
+                $("#heading").text("x and o");
+                $(".block").each(function(){
+                    $(this).text(' ')
+                });
+                $(".block").css("pointer-events","all");
+            }
+        )
         
         
     }

@@ -43,4 +43,12 @@ body {
   border-radius: 1rem;
   margin: 0.5rem;
 }
+
+#reset {
+  padding: 0.4rem 2rem;
+  margin-top: 1rem;
+  background: teal;
+  border: none;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
